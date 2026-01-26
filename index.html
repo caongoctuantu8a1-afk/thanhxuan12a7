@@ -123,9 +123,41 @@ th, td{
 
 .video-box{
     display:flex;
-    gap:20px;
+    gap:25px;
     flex-wrap:wrap;
     justify-content:center;
+}
+/* KHUNG VIỀN VIDEO */
+.video-frame{
+    background:white;
+    padding:10px;
+    border-radius:18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+
+.video-frame:hover{
+    transform: scale(1.05);
+}
+
+
+.video-frame video{
+    border-radius:12px;
+}
+
+.video-main{
+    width:100%;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+
+.video-main video{
+    width:65%;
+    max-width:600px;
+    border-radius:18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 footer{
@@ -147,8 +179,12 @@ footer{
 <nav>
 <a href="#gioithieu">Giới thiệu</a>
 <a href="#thanhvien">Thành viên</a>
-<a href="#hinhanh">Hình ảnh</a>
-<a href="#video">Video</a>
+<a href="#hinhanh10">Hình ảnh lớp 10</a>
+<a href="#hinhanh11">Hình ảnh lớp 11</a>
+<a href="#hinhanh12">Hình ảnh lớp 12</a>
+<a href="#video10">Video lớp 10</a>
+<a href="#video11">Video lớp 11</a>
+<a href="#video12">Video lớp 12</a>
 </nav>
 
 <section id="gioithieu">
@@ -161,95 +197,159 @@ Người ta hay nói: ‘Thanh xuân như một cơn mưa rào, dù bạn từng
 </section>
 
 <section id="thanhvien">
-<h2>Danh sách thành viên (12 người)</h2>
+<h2>Danh sách thành viên</h2>
 <ul>
-<li>Nguyễn Văn A – Trưởng nhóm</li>
-<li>Trần Thị B – Giao diện</li>
-<li>Lê Văn C – Nội dung</li>
-<li>Phạm Thị D – Hình ảnh</li>
-<li>Hoàng Văn E – Video</li>
-<li>Nguyễn Thị F – Tư liệu</li>
-<li>Trần Văn G – Thu thập ảnh</li>
-<li>Lê Thị H – Viết bài</li>
-<li>Phạm Văn I – Kiểm tra</li>
-<li>Vũ Thị K – Trang trí</li>
-<li>Đỗ Văn L – Tổng hợp</li>
-<li>Bùi Thị M – Thuyết trình</li>
+<li>Cao Ngọc Tuấn Tú – Trưởng nhóm</li>
+<li>Nguyễn Chí Dũng – Giao diện</li>
+<li>Lê Mạnh Cường – Nội dung</li>
+<li>Trần Huỳnh Bảo Ngọc – Hình ảnh</li>
 </ul>
 
 <h3>Bảng phân công nhiệm vụ</h3>
 <table>
-<tr><th>STT</th><th>Họ tên</th><th>Nhiệm vụ</th></tr>
-<tr><td>1</td><td>Nguyễn Văn A</td><td>Trưởng nhóm</td></tr>
-<tr><td>2</td><td>Trần Thị B</td><td>Giao diện</td></tr>
-<tr><td>3</td><td>Lê Văn C</td><td>Nội dung</td></tr>
-<tr><td>4</td><td>Phạm Thị D</td><td>Hình ảnh</td></tr>
-<tr><td>5</td><td>Hoàng Văn E</td><td>Video</td></tr>
-<tr><td>6</td><td>Nguyễn Thị F</td><td>Tư liệu</td></tr>
-<tr><td>7</td><td>Trần Văn G</td><td>Thu thập ảnh</td></tr>
-<tr><td>8</td><td>Lê Thị H</td><td>Viết bài</td></tr>
-<tr><td>9</td><td>Phạm Văn I</td><td>Kiểm tra</td></tr>
-<tr><td>10</td><td>Vũ Thị K</td><td>Trang trí</td></tr>
-<tr><td>11</td><td>Đỗ Văn L</td><td>Tổng hợp</td></tr>
-<tr><td>12</td><td>Bùi Thị M</td><td>Thuyết trình</td></tr>
+<tr><th>STT</th><th>Họ tên</th><th>Biệt danh và ngày sinh</th></tr>
+<tr><td>1</td><td>Cao Ngọc Tuấn Tú</td><td>conga - 06/06/2008</td></tr>
+<tr><td>2</td><td>Nguyễn Chí Dũng</td><td>vanh - 10/05/2008</td></tr>
+<tr><td>3</td><td>Lê Mạnh Cường</td><td>vo dich Euro - 19/04/2008</td></tr>
+<tr><td>4</td><td>Trần Huỳnh Bảo Ngọc</td><td>sau này sẽ khác - 24/08/2008</td></tr>
 </table>
 </section>
 
-<section id="hinhanh">
-<h2>Hình ảnh kỉ niệm</h2>
+<!-- LỚP 10 -->
+<section id="hinhanh10">
+<h2>Hình ảnh kỉ niệm lớp 10</h2>
 <div class="slider">
-<span class="arrow left" onclick="prev()">&#10094;</span>
-<img id="slide" src="https://via.placeholder.com/600x400?text=Ky+niem+1">
-<span class="arrow right" onclick="next()">&#10095;</span>
+<span class="arrow left" onclick="prev10()">&#10094;</span>
+<img id="slide10" src="lop10_1.jpg">
+<span class="arrow right" onclick="next10()">&#10095;</span>
 </div>
 </section>
 
-<section id="video">
-<h2>Video kỉ niệm</h2>
+
+<section id="video10">
+<h2>Video kỉ niệm lớp 10</h2>
+<div class="video-main">
+    <video controls>
+        <source src="lop10_1.mp4">
+    </video>
+</div>
 <div class="video-box">
-    <video width="400" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4">
-    </video>
-
-    <video width="400" controls>
-        <source src="https://www.w3schools.com/html/movie.mp4">
-    </video>
+<div class="video-frame">
+<video width="400" controls><source src="lop10_2.mp4"></video>
+<video width="400" controls><source src="lop10_3.mp4"></video>
+<video width="400" controls><source src="lop10_4.mp4"></video>
 </div>
 </section>
+
+
+<!-- LỚP 11 -->
+<section id="hinhanh11">
+<h2>Hình ảnh kỉ niệm lớp 11</h2>
+<div class="slider">
+<span class="arrow left" onclick="prev11()">&#10094;</span>
+<img id="slide11" src="lop11_1.jpg">
+<span class="arrow right" onclick="next11()">&#10095;</span>
+</div>
+</section>
+
+
+<section id="video11">
+<h2>Video kỉ niệm lớp 11</h2>
+<div class="video-main">
+    <video controls>
+        <source src="lop11_4.mp4">
+    </video>
+</div>
+<div class="video-box">
+<div class="video-frame">
+<video width="400" controls><source src="lop11_1.mp4"></video>
+<video width="400" controls><source src="lop11_2.mp4"></video>
+<video width="400" controls><source src="lop11_3.mp4"></video>
+</div>
+</section>
+
+
+<!-- LỚP 12 -->
+<section id="hinhanh12">
+<h2>Hình ảnh kỉ niệm lớp 12</h2>
+<div class="slider">
+<span class="arrow left" onclick="prev12()">&#10094;</span>
+<img id="slide12" src="lop12_1.jpg">
+<span class="arrow right" onclick="next12()">&#10095;</span>
+</div>
+</section>
+
+
+<section id="video12">
+<h2>Video kỉ niệm lớp 12</h2>
+<div class="video-main">
+    <video controls>
+        <source src="lop12_3.mp4">
+    </video>
+</div>
+<div class="video-box">
+<div class="video-frame">
+<video width="400" controls><source src="lop12_1.mp4"></video>
+<video width="400" controls><source src="lop12_2.mp4"></video>
+<video width="400" controls><source src="lop12_4.mp4"></video>
+</div>
+</section>
+
 
 <footer>
-<p>© 2026 – Nhóm học sinh lớp 12, THPT Châu Thành</p>
+<p>© 2026 – 12A7 - K66, THPT Châu Thành</p>
 </footer>
 
+
 <script>
-let images = [
-"https://via.placeholder.com/600x400?text=Ky+niem+1",
-"https://via.placeholder.com/600x400?text=Ky+niem+2",
-"https://via.placeholder.com/600x400?text=Ky+niem+3",
-"https://via.placeholder.com/600x400?text=Ky+niem+4",
-"https://via.placeholder.com/600x400?text=Ky+niem+5",
-"https://via.placeholder.com/600x400?text=Ky+niem+6"
-];
+let images10 = ["lop10_1.jpg","lop10_2.jpg","lop10_3.jpg","lop10_4.jpg","lop10_5.jpg","lop10_6.jpg","lop10_7.jpg","lop10_8.jpg","lop10_9.jpg","lop10_10.jpg","lop10_11.jpg","lop10_12.jpg"];
+let images11 = ["lop11_1.jpg","lop11_2.jpg","lop11_3.jpg","lop11_4.jpg","lop11_5.jpg","lop11_6.jpg","lop11_7.jpg","lop11_8.jpg","lop11_9.jpg","lop11_10.jpg","lop11_11.jpg","lop11_12.jpg"];
+let images12 = ["lop12_1.jpg","lop12_2.jpg","lop12_3.jpg","lop12_4.jpg","lop12_5.jpg","lop12_6.jpg","lop12_7.jpg","lop12_8.jpg","lop12_9.jpg","lop12_10.jpg","lop12_11.jpg","lop12_12.jpg"];
 
-let index = 0;
-let slide = document.getElementById("slide");
 
-function next(){
-    index = (index + 1) % images.length;
-    slide.src = images[index];
+let i10 = 0, i11 = 0, i12 = 0;
+
+
+let slide10 = document.getElementById("slide10");
+let slide11 = document.getElementById("slide11");
+let slide12 = document.getElementById("slide12");
+
+
+// LỚP 10
+function next10(){
+    i10 = (i10 + 1) % images10.length;
+    slide10.src = images10[i10];
+}
+function prev10(){
+    i10 = (i10 - 1 + images10.length) % images10.length;
+    slide10.src = images10[i10];
 }
 
-function prev(){
-    index = (index - 1 + images.length) % images.length;
-    slide.src = images[index];
+
+// LỚP 11
+function next11(){
+    i11 = (i11 + 1) % images11.length;
+    slide11.src = images11[i11];
+}
+function prev11(){
+    i11 = (i11 - 1 + images11.length) % images11.length;
+    slide11.src = images11[i11];
+}
+
+
+// LỚP 12
+function next12(){
+    i12 = (i12 + 1) % images12.length;
+    slide12.src = images12[i12];
+}
+function prev12(){
+    i12 = (i12 - 1 + images12.length) % images12.length;
+    slide12.src = images12[i12];
 }
 </script>
 
+
 </body>
 </html>
-
-
-
-
 
 
